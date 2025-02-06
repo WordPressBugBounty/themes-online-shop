@@ -5,7 +5,7 @@ Tags: e-commerce,blog, news, one-column, two-columns, three-columns, four-column
 Requires at least: 4.8
 Requires PHP: 5.6.20
 Tested up to: 6.7
-Stable tag: 3.1.0
+Stable tag: 3.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -72,6 +72,9 @@ self created GPLv2 or later
 - placeholder_plugin.png
 
 == Change log ==
+
+= 3.1.1 - Feb 06 2025 =
+* Updated: Breadcrumbs https://wordpress.org/support/topic/uncaught-typeerror-count-argument-1-value-must-be-of-type-countablearra/.
 
 = 3.1.0 - Jan 21 2025 =
 * Added: Enhanced support for the latest WordPress version.

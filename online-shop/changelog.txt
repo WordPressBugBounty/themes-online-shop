@@ -1,5 +1,8 @@
 == Change log ==
 
+= 3.1.1 - Feb 06 2025 =
+* Updated: Breadcrumbs https://wordpress.org/support/topic/uncaught-typeerror-count-argument-1-value-must-be-of-type-countablearra/.
+
 = 3.1.0 - Jan 21 2025 =
 * Added: Enhanced support for the latest WordPress version.
 * Updated: Improved CSS compatibility.
