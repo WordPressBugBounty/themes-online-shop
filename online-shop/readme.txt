@@ -4,8 +4,8 @@ Contributors: acmethemes
 Tags: e-commerce,blog, news, one-column, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-logo, custom-menu, editor-style, featured-images, flexible-header, footer-widgets, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, block-styles, wide-blocks
 Requires at least: 4.8
 Requires PHP: 5.6.20
-Tested up to: 6.7
-Stable tag: 3.1.1
+Tested up to: 6.8
+Stable tag: 3.1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -72,6 +72,11 @@ self created GPLv2 or later
 - placeholder_plugin.png
 
 == Change log ==
+
+= 3.1.2 - Apr 21 2025 =
+* Added: Tested with the latest WordPress.
+* Added: Static caching mechanism for theme options to improve performance.
+* Fixed: Resolved issue with translation function preload
 
 = 3.1.1 - Feb 06 2025 =
 * Updated: Breadcrumbs https://wordpress.org/support/topic/uncaught-typeerror-count-argument-1-value-must-be-of-type-countablearra/.

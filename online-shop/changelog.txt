@@ -1,5 +1,10 @@
 == Change log ==
 
+= 3.1.2 - Apr 21 2025 =
+* Added: Tested with the latest WordPress.
+* Added: Static caching mechanism for theme options to improve performance.
+* Fixed: Resolved issue with translation function preload
+
 = 3.1.1 - Feb 06 2025 =
 * Updated: Breadcrumbs https://wordpress.org/support/topic/uncaught-typeerror-count-argument-1-value-must-be-of-type-countablearra/.
 
