@@ -292,7 +292,7 @@ if ( ! class_exists( 'Online_Shop_Wc_Feature_Cats' ) ) {
                 <label for="<?php echo esc_attr( $this->get_field_id( 'online_shop_widget_title' ) ); ?>">
                     <?php esc_html_e( 'Title', 'online-shop' ); ?>
                 </label>
-                <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'online_shop_widget_title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'online_shop_widget_title' ) ); ?>" type="text" value="<?php echo $online_shop_widget_title; ?>" />
+                <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'online_shop_widget_title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'online_shop_widget_title' ) ); ?>" type="text" value="<?php echo esc_attr( $online_shop_widget_title ); ?>" />
             </p>
 
             <p>
@@ -320,7 +320,7 @@ if ( ! class_exists( 'Online_Shop_Wc_Feature_Cats' ) ) {
 			        }
 			        ?>
                     <p>
-                        <input id="<?php echo esc_attr( $this->get_field_id($at_option_name) ); ?>" name="<?php echo esc_attr( $this->get_field_name('online_shop_featured_cats').'['.$at_option_name.']' ); ?>" type="checkbox" value="1" <?php checked('1', $online_shop_featured_cats[$at_option_name]); ?>/>
+                        <input id="<?php echo esc_attr( $this->get_field_id($at_option_name) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'online_shop_featured_cats').'['.$at_option_name.']' ); ?>" type="checkbox" value="1" <?php checked('1', $online_shop_featured_cats[$at_option_name]); ?>/>
                         <label for="<?php echo esc_attr( $this->get_field_id($at_option_name) ); ?>"><?php echo esc_html( $at_option_title ); ?></label>
                     </p>
 			        <?php
@@ -411,7 +411,7 @@ if ( ! class_exists( 'Online_Shop_Wc_Feature_Cats' ) ) {
                 <select class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'online_shop_img_size' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'online_shop_img_size' ) ); ?>">
 			        <?php
 			        foreach( $choices as $key => $online_shop_column_array ){
-				        echo ' <option value="'.esc_attr( $key ).'" '.selected( $online_shop_img_size, $key, 0).'>'.esc_attr( $online_shop_column_array ).'</option>';
+				        echo ' <option value="'.esc_attr( $key ).'" '.selected( esc_attr( $online_shop_img_size ), $key, 0).'>'.esc_attr( $online_shop_column_array ).'</option>';
 			        }
 			        ?>
                 </select>
@@ -491,7 +491,7 @@ if ( ! class_exists( 'Online_Shop_Wc_Feature_Cats' ) ) {
 	        ){
 
 		        echo $args['before_title'];
-		        echo $online_shop_widget_title;
+		        echo esc_html( $online_shop_widget_title );
 		        echo "<span class='at-action-wrapper'>";
 		        if( 'disable' != $view_all_option && !empty( $all_link_text ) && !empty( $all_link_url )){
 			        $target ='';

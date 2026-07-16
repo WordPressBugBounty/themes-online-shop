@@ -253,7 +253,7 @@ class Breadcrumb_Trail {
 			return $breadcrumb;
 		}
 
-		echo $breadcrumb;
+		echo wp_kses_post( $breadcrumb );
 	}
 
 	/* ====== Protected Methods ====== */

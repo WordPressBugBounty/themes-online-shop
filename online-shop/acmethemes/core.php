@@ -70,6 +70,18 @@ if ( ! function_exists( 'online_shop_setup' ) ) :
 			)
 		);
 
+				/*
+		 * Switch default core markup for search form, comment form, and comments
+		 * to output valid HTML5.
+		 */
+		add_theme_support( 'html5', array(
+			'search-form',
+			'comment-form',
+			'comment-list',
+			'gallery',
+			'caption',
+		) );
+
 		// Set up the WordPress core custom background feature.
 		add_theme_support(
 			'custom-background',
@@ -135,10 +147,8 @@ function online_shop_scripts() {
 
 	/*jquery start*/
 	wp_enqueue_script( 'html5shiv', get_template_directory_uri() . '/assets/library/html5shiv/html5shiv.min.js', array( 'jquery' ), '3.7.3', false );
-	wp_script_add_data( 'html5shiv', 'conditional', 'lt IE 9' );
 
 	wp_enqueue_script( 'respond', get_template_directory_uri() . '/assets/library/respond/respond.min.js', array( 'jquery' ), '1.4.2', false );
-	wp_script_add_data( 'respond', 'conditional', 'lt IE 9' );
 
 	/*slick slider*/
 	wp_enqueue_style( 'slick', get_template_directory_uri() . '/assets/library/slick/slick.css', array(), '1.8.1' );

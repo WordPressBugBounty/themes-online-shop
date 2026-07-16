@@ -2,10 +2,10 @@
 
 Contributors: acmethemes
 Tags: e-commerce,blog, news, one-column, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-logo, custom-menu, editor-style, featured-images, flexible-header, footer-widgets, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, block-styles, wide-blocks
-Requires at least: 4.8
-Requires PHP: 5.6.20
-Tested up to: 6.8
-Stable tag: 3.1.2
+Requires at least: 6.6
+Requires PHP: 7.4
+Tested up to: 7.0
+Stable tag: 4.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -58,6 +58,7 @@ Online Shop bundles the following third-party resources:
 - https://pixabay.com/en/converse-chucks-shoes-sneakers-2483523/ - License CC0 Public Domain
 - https://pixabay.com/en/raspberry-berry-ripe-2023404/ - License CC0 Public Domain
 
+
 == Other Images ==
 
 self created GPLv2 or later
@@ -72,6 +73,10 @@ self created GPLv2 or later
 - placeholder_plugin.png
 
 == Change log ==
+
+= 4.0.0 - Jul 14 2026 =
+* Updated: WordPress 7.0 compatibility
+* Updated: Requires PHP 7.4
 
 = 3.1.2 - Apr 21 2025 =
 * Added: Tested with the latest WordPress.
@@ -245,3 +250,13 @@ self created GPLv2 or later
 2. Set Thumbnail size 500*280, Medium size 660*365, Large size 840*480
 3. Also, check this 'Crop thumbnail to exact dimensions (normally thumbnails are proportional)'
 4. Click Save Changes
+
+== Installation ==
+
+1. Download the theme zip file.
+2. In your Admin Dashboard go to Appearance > Themes.
+3. Click on the Add New button.
+4. Click Upload Plugin and then click Choose File.
+5. Select the downloaded zip file and click Install Now.
+6. After installation, click Activate.
+

@@ -17,7 +17,7 @@
 				$placeholder_text = ' placeholder="' . esc_attr( $online_shop_customizer_all_values['online-shop-search-placeholder'] ) . '" ';
 			endif;
 			?>
-			<input type="text" <?php echo $placeholder_text; ?> id="menu-search" name="s" value="<?php echo get_search_query(); ?>">
+			<input type="text" <?php echo esc_attr( $placeholder_text ); ?> id="menu-search" name="s" value="<?php echo esc_attr( get_search_query() ); ?>">
 			<button class="fa fa-search" type="submit" id="searchsubmit"></button>
 		</div>
 	</form>

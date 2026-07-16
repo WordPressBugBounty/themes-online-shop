@@ -69,7 +69,7 @@ if ( ! class_exists( 'Online_Shop_Posts_Col' ) ) {
                 <label for="<?php echo esc_attr( $this->get_field_id( 'online_shop_widget_title' ) ); ?>">
                     <?php esc_html_e( 'Title', 'online-shop' ); ?>
                 </label>
-                <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'online_shop_widget_title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'online_shop_widget_title' ) ); ?>" type="text" value="<?php echo $online_shop_widget_title; ?>" />
+                <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'online_shop_widget_title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'online_shop_widget_title' ) ); ?>" type="text" value="<?php echo esc_attr( $online_shop_widget_title ); ?>" />
             </p>
             <p>
                 <label for="<?php echo esc_attr( $this->get_field_id( 'post_advanced_option' ) ); ?>"><?php esc_html_e( 'Show', 'online-shop' ); ?></label>
@@ -234,7 +234,7 @@ if ( ! class_exists( 'Online_Shop_Posts_Col' ) ) {
                 <select class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'online_shop_img_size' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'online_shop_img_size' ) ); ?>">
 			        <?php
 			        foreach( $choices as $key => $online_shop_column_array ){
-				        echo ' <option value="'.esc_attr( $key ).'" '.selected( $online_shop_img_size, $key, 0). '>'.esc_attr( $online_shop_column_array ).'</option>';
+				        echo ' <option value="'.esc_attr( $key ).'" '.selected( esc_attr( $online_shop_img_size ), $key, 0). '>'.esc_attr( $online_shop_column_array ).'</option>';
 			        }
 			        ?>
                 </select>
@@ -377,7 +377,7 @@ if ( ! class_exists( 'Online_Shop_Posts_Col' ) ) {
 			            echo "<div class='at-cat-color-wrap-".$online_shop_post_cat."'>";
 		            }
 	                echo $args['before_title'];
-		            echo $online_shop_widget_title;
+		            echo esc_html( $online_shop_widget_title );
 		            echo "<span class='at-action-wrapper'>";
 		            if( 'disable' != $view_all_option && !empty( $all_link_text ) && !empty( $all_link_url )){
 			            $target ='';
@@ -402,7 +402,7 @@ if ( ! class_exists( 'Online_Shop_Posts_Col' ) ) {
 		            $div_attr = 'class="featured-entries-col acme-slick-carausel" data-column="'.absint( $column_number ).'"';
 	            }
                 ?>
-                <div <?php echo $div_attr;?>>
+                <div <?php echo esc_attr( $div_attr ); ?>>
 	                <?php
 	                $online_shop_featured_index = 1;
 	                while ( $online_shop_featured_query->have_posts() ) :$online_shop_featured_query->the_post();

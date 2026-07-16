@@ -49,7 +49,7 @@ if ( ! class_exists( 'Online_Shop_Advanced_Image_Logo' ) ) {
 			?>
             <p>
                 <label for="<?php echo esc_attr( $this->get_field_id( 'online_shop_widget_title' ) ); ?>"><?php esc_html_e( 'Title', 'online-shop' ); ?></label>
-                <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'online_shop_widget_title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'online_shop_widget_title' ) ); ?>" type="text" value="<?php echo $online_shop_widget_title; ?>"/>
+                <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'online_shop_widget_title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'online_shop_widget_title' ) ); ?>" type="text" value="<?php echo esc_attr( $online_shop_widget_title ); ?>"/>
             </p>
 
             <!--updated code-->
@@ -321,7 +321,7 @@ if ( ! class_exists( 'Online_Shop_Advanced_Image_Logo' ) ) {
 			){
 
 				echo $args['before_title'];
-				echo $online_shop_widget_title;
+				echo esc_html( $online_shop_widget_title );
 				echo "<span class='at-action-wrapper'>";
 				if( 'disable' != $view_all_option && !empty( $all_link_text ) && !empty( $all_link_url )){
 					$target ='';
@@ -338,7 +338,7 @@ if ( ! class_exists( 'Online_Shop_Advanced_Image_Logo' ) ) {
 				echo $args['after_title'];
 			}
 			?>
-            <div <?php echo $div_attr;?>>
+            <div <?php echo esc_attr( $div_attr ); ?>>
                 <?php
                 if  ( is_array( $at_all_logo_items ) && count( $at_all_logo_items ) > 0 ){
 	                $online_shop_featured_index = 1;
@@ -378,7 +378,7 @@ if ( ! class_exists( 'Online_Shop_Advanced_Image_Logo' ) ) {
 						                echo '<a href="'.$logo_img_link.'" class="all-link" '.$target.'>';
 					                }
 					                ?>
-                                    <img src=" <?php echo $logo_img_url?>">
+                                    <img src=" <?php echo esc_url( $logo_img_url ); ?>">
 					                <?php
 					                if( 'disable' != $single_item_link_option ){
 						                echo '</a>';
